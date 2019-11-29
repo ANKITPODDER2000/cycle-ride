@@ -1,0 +1,56 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+#WheelR,#WheelL{
+	animation: animateWh 2s linear infinite;
+	transform-origin: center;
+	transform-box: fill-box;
+}
+@keyframes animateWh{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+#TreeL,#TreeR{
+	animation: fly 3s infinite;
+	transform-origin: bottom;
+	transform-box: fill-box;
+}
+@keyframes fly{
+	0%{
+		transform: rotateZ(0deg);
+	}
+	35%{
+		transform: rotateZ(10deg);
+	}
+	70%{
+		transform: rotateZ(-10deg);
+	}
+	100%{
+		transform: rotateZ(0deg);
+	}
+}
+#Man{
+	animation: aniMan 1s infinite alternate;
+	transform-origin: bottom;
+}
+@keyframes aniMan{
+	from{
+		transform: rotateX(0);
+	}
+	to{
+		transform: rotateX(20deg);
+	}
+}
